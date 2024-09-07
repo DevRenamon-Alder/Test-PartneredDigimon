@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-image: url("../img/blue-grid-backg.jpg");
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+a, a::after {
+    color: hsl(17, 78%, 32%);
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+#window {
+    background-color: hsl(60, 10%, 85%);
+    border: groove hsl(250, 41%, 49%) 5px;
+    color: hsl(250, 65%, 30%);
+    font-family: 'Courier New', Courier, monospace;
+    height: 90%;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#welcome {
+    background-color: mediumslateblue;
+    border-bottom: solid hsl(250, 65%, 30%) 3px;
+    color: white;
+}
+
+/* Header */
+nav ul {
+    display: table;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+nav li {
+    border-bottom: solid hsl(250, 65%, 30%) 3px;
+    display: table-cell;
+    padding: 0 .1em 0 .05em;
+    vertical-align: middle;
+}
+
+header img {
+    vertical-align: middle;
+}
+
+.location {
+    background-color: white;
+    border: solid black 1px;
+    color: black;
+    float: right;
+    font-size: .75em;
+    height: 1.1em;
+    width: 50%;
+    margin-top: .2em;
+    margin-right: 30%;
+    padding-left: .2em;
+}
+
+.logo {
+    float: left;
+    margin: .2em;
+}
+
+#location-border {
+    background-color: hsl(60, 10%, 81.3%);
+    border-bottom: solid hsl(250, 65%, 30%) 2px;
+    height: 1.2em;
+}
+
+#button {
+    height: 4em;
+    position: relative;
+    right: 2.5em;
+}
+
+/* Main */
+
+main {
+    background-color: hsl(60, 9%, 77%);
+    border-bottom: groove hsl(250, 41%, 49%) 5px;
+    padding-top: 10%;
+    text-align: center;
+    height: 38em;
+}
+
+div.digimon-1 img, div.digimon-2 img, div.digimon-3 img, div.digimon-4 img, div.digimon-5 img, div.digimon-6 img {
+    width: 90%;
+    margin: 10px;
+}
+
+div.dig-border-4 img {
+    grid-column: 1;
+    grid-row: 1;
+}
+
+div.digimon-4 img.clothing {
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 1;
+}
+
+.upper-digimon {
+    display: inline-grid;
+    grid-template-columns: 200px 200px 200px;
+    justify-content: center;
+    column-gap: 50px;
+}
+
+.lower-digimon {
+    display: inline-grid;
+    grid-template-columns: 200px 200px 200px;
+    justify-content: center;
+    column-gap: 50px;
+}
+
+.digimon-1, .digimon-2, .digimon-3, .digimon-4, .digimon-5, .digimon-6 {
+    display: grid;
+    height: 220px;
+    width: 200px;
+    grid-template-rows: 200px, .2em;
+}
+
+.digi-border-1, .digi-border-2, .digi-border-3, .digi-border-4, .digi-border-5, .digi-border-6 {
+    display: grid;
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    border: groove 5px hsl(250, 41%, 49%);
+}
+
+#page-content {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    border: groove 5px hsl(250, 41%, 49%);
+    background-color: hsl(60, 7%, 75%);
+    margin-left: auto;
+    margin-right: auto;
+    padding: .5em;
+    position: relative;
+    bottom: 6.25em;
+    height: 36em;
+    width: 65em;
+}
