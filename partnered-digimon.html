@@ -7,12 +7,13 @@
         <link rel="stylesheet" type="text/css" href="./css/partnered-digimon.css">
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
+        <script src="partnered-digimon.js"></script>
     </head>
     <body>
       <div id="window">
-<!--Section containing standard site info -- Header-->
+<!-- Section containing standard site info -- Header -->
       <header>
-<!--Navigation Menu-->
+<!-- Navigation Menu -->
         <div id="welcome">
           <p><strong>Welcome to the Digital World</strong></p>
         </div>
@@ -32,55 +33,83 @@
             <li><a href="./guild-hall.html">Guild Hall</a></li>
             <li><a href="./login.html">User Login</a></li>
             <li><a href="./signup.html">Sign Up</a></li>
-      </ul>
+          </ul>
         </nav>
+        <!-- Describes the in world location of the web page while also calling back to retro computer browsers -->
         <div class="location">
           <p><strong>Location: The Digital World > Utility Matrix > Partners</strong></p>
         </div>
         <div id="location-border">
         </div>
       </header>
-<!--Section containing sign up form -- Main-->
+<!-- Section containing digimon displays and menus -- Main -->
         <main>
           <div id="page-content">
             <div class="upper-digimon">
-              <div class="digimon-1">
+              <div class="digimon-1 popcontainer-up" id="digimon-1">
                 <div class="digi-border-1">
-                  <img src="./img/pulsemon.png">
-                </div><br>
+                  <img src="./img/pulsemon.png"onclick="popFunction1()">
+                </div>
                 <p class="digi-label"><strong>Pulsemon</strong></p>
               </div>
               <div class="digimon-2">
-              <div class="digi-border-2">
+                <div class="digi-border-2">
                   <img src="./img/numemon.png">
-                </div><br>
+                </div>
                 <p class="digi-label"><strong>Numemon</strong></p>
               </div>
               <div class="digimon-3">
                 <div class="digi-border-3">
                   <img src="./img/terriermon-num-01.png">
-                </div><br>
+                </div>
                 <p class="digi-label"><strong>Terriermon</strong></p>
               </div>
             </div>
+            <span id="popFunction1"><div class="popup1">
+                <h3 class="block0 popbold">Pulsemon</h3>
+                <div class="block-a1">
+                  <p><strong class="popbold">Basic Stats</strong></p>
+                  <ul class="center">
+                    <li>Mood: Happy</li>
+                    <li>Hunger: Full Belly</li>
+                    <li>HP: 100%</li>
+                    <li>Raw Data: 0</li>
+                  </ul>
+                </div>
+                <div class="block-b1">
+                  <p><strong class="popbold">Show Digivolutions</strong></p>
+                  <div class="center">
+                    <ol class="block-b2">
+                      <li>Bulkmon</li>
+                      <li>Namakemon</li>
+                    </ol>
+                  </div>
+                </div>
+                <div class="block-c1">
+                  <div class="center">
+                    <p><strong class="popbold">Favorite Toy: </strong>Tetanus (Video Game)</p>
+                    <p><strong class="popbold">Favorite Food: </strong>BLT (Sandwich)</p>  
+                  </div>
+                </div>
+            </div> </span>
             <div class="lower-digimon">
-              <div class="digimon-4">
+              <div class="digimon-4 popupclick4">
                 <div class="digi-border-4">
-                  <img src="./img/terriermon-gaming.png">
-                </div><br>
-                <img class="clothing" src="./img/terriermon-shades.png">
+                  <img class="base" src="./img/terriermon-gaming.png">
+                  <img class="clothing glasses" src="./img/terriermon-shades.png">
+                </div>
                 <p class="digi-label"><strong>Terriermon</strong></p>
               </div>
               <div class="digimon-5">
                 <div class="digi-border-5">
                   <img src="./img/lopmon.png">
-                </div><br>
+                </div>
                 <p class="digi-label"><strong>Lopmon</strong></p>
               </div>
               <div class="digimon-6">
                 <div class="digi-border-6">
                   <img src="./img/Empty-Digimon.png">
-                </div><br>
+                </div>
                 <p class="digi-label"><strong>Digimon #6</strong></p>
               </div>
             </div>
