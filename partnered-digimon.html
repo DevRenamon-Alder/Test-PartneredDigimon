@@ -7,7 +7,7 @@
         <link rel="stylesheet" type="text/css" href="./css/partnered-digimon.css">
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/favicon.ico" type="image/x-icon">
-        <script src="partnered-digimon.js"></script>
+        <script src="./partnered-digimon.js" defer></script>
     </head>
     <body>
       <div id="window">
@@ -52,28 +52,29 @@
                 </div>
                 <p class="digi-label"><strong>Pulsemon</strong></p>
               </div>
-              <div class="digimon-2">
+              <div class="digimon-2" id="digimon-2">
                 <div class="digi-border-2">
                   <img src="./img/numemon.png">
                 </div>
                 <p class="digi-label"><strong>Numemon</strong></p>
               </div>
-              <div class="digimon-3">
+              <div class="digimon-3" id="digimon-3">
                 <div class="digi-border-3">
                   <img src="./img/terriermon-num-01.png">
                 </div>
                 <p class="digi-label"><strong>Terriermon</strong></p>
               </div>
             </div>
-            <span id="popFunction1"><div class="popup1">
-                <h3 class="block0 popbold">Pulsemon</h3>
+            <span><div id="popup1" class="popup1">
+                <h3 class="block0 popbold" id="digimon1"></h3>
                 <div class="block-a1">
                   <p><strong class="popbold">Basic Stats</strong></p>
                   <ul class="center">
-                    <li>Mood: Happy</li>
-                    <li>Hunger: Full Belly</li>
-                    <li>HP: 100%</li>
+                    <li>Stage: Rookie</li>
                     <li>Raw Data: 0</li>
+                    <li>Hit Points: 100%</li>
+                    <li>Current Mood: Happy</li>
+                    <li>Current Hunger: Full Belly</li>
                   </ul>
                 </div>
                 <div class="block-b1">
@@ -87,20 +88,161 @@
                 </div>
                 <div class="block-c1">
                   <div class="center">
-                    <p><strong class="popbold">Favorite Toy: </strong>Tetanus (Video Game)</p>
-                    <p><strong class="popbold">Favorite Food: </strong>BLT (Sandwich)</p>  
+                    <p><strong class="popbold">Favorite Toy: </strong><span id="favToySpfc1"></span> (<span id="favToy1"></span>)</p>
+                    <p><strong class="popbold">Favorite Food: </strong><span id="favoriteFood1"></span></p>  
                   </div>
                 </div>
             </div> </span>
-            <div class="lower-digimon">
-              <div class="digimon-4 popupclick4">
+            <span><div id="popup2" class="popup2">
+              <h3 class="block0 popbold" id="digimon2"></h3>
+              <div class="block-a1">
+                <p><strong class="popbold">Basic Stats</strong></p>
+                <ul class="center">
+                  <li>Stage: Champion</li>
+                  <li>Raw Data: 0</li>
+                  <li>Hit Points: 100%</li>
+                  <li>Current Mood: Happy</li>
+                  <li>Current Hunger: Full Belly</li>
+                </ul>
+              </div>
+              <div class="block-b1">
+                <p><strong class="popbold">Show Digivolutions</strong></p>
+                <div class="center">
+                  <ol class="block-b2">
+                    <li>Monzaemon</li>
+                    <li>WaruMonzaemon</li>
+                    <li>BlackKingNumemon</li>
+                  </ol>
+                </div>
+              </div>
+              <div class="block-c1">
+                <div class="center">
+                  <p><strong class="popbold">Favorite Toy: </strong><span id="favToySpfc2"></span> (<span id="favToy2"></span>)</p>
+                  <p><strong class="popbold">Favorite Food: </strong><span id="favoriteFood2"></span></p>  
+                </div>
+              </div>
+          </div> </span>
+          <span><div id="popup3" class="popup3">
+            <h3 class="block0 popbold" id="digimon3"></h3>
+            <div class="block-a1">
+              <p><strong class="popbold">Basic Stats</strong></p>
+              <ul class="center">
+                <li>Stage: Rookie</li>
+                <li>Raw Data: 0</li>
+                <li>Hit Points: 100%</li>
+                <li>Current Mood: Happy</li>
+                <li>Current Hunger: Full Belly</li>
+              </ul>
+            </div>
+            <div class="block-b1">
+              <p><strong class="popbold">Show Digivolutions</strong></p>
+              <div class="center">
+                <ol class="block-b2">
+                  <li>Gargomon</li>
+                  <li>Gargomon Black</li>
+                </ol>
+              </div>
+            </div>
+            <div class="block-c1">
+              <div class="center">
+                <p><strong class="popbold">Favorite Toy: </strong><span id="favToySpfc3"></span> (<span id="favToy3"></span>)</p>
+                <p><strong class="popbold">Favorite Food: </strong><span id="favoriteFood3"></span></p>  
+              </div>
+            </div>
+        </div> </span>
+        <span><div id="popup4" class="popup4">
+          <h3 class="block0 popbold" id="digimon4"></h3>
+          <div class="block-a1">
+            <p><strong class="popbold">Basic Stats</strong></p>
+            <ul class="center">
+              <li>Stage: Rookie</li>
+              <li>Raw Data: 0</li>
+              <li>Hit Points: 100%</li>
+              <li>Current Mood: Happy</li>
+              <li>Current Hunger: Full Belly</li>
+            </ul>
+          </div>
+          <div class="block-b1">
+            <p><strong class="popbold">Show Digivolutions</strong></p>
+            <div class="center">
+              <ol class="block-b2">
+                <li>Gargomon</li>
+                <li>Gargomon Black</li>
+              </ol>
+            </div>
+          </div>
+          <div class="block-c1">
+            <div class="center">
+              <p><strong class="popbold">Favorite Toy: </strong><span id="favToySpfc4"></span> (<span id="favToy4"></span>)</p>
+              <p><strong class="popbold">Favorite Food: </strong><span id="favoriteFood4"></span></p>  
+            </div>
+          </div>
+      </div> </span>
+      <span><div id="popup5" class="popup5">
+        <h3 class="block0 popbold" id="digimon5"></h3>
+        <div class="block-a1">
+          <p><strong class="popbold">Basic Stats</strong></p>
+          <ul class="center">
+            <li>Stage: Rookie</li>
+            <li>Raw Data: 0</li>
+            <li>Hit Points: 100%</li>
+            <li>Current Mood: Happy</li>
+            <li>Current Hunger: Full Belly</li>
+          </ul>
+        </div>
+        <div class="block-b1">
+          <p><strong class="popbold">Show Digivolutions</strong></p>
+          <div class="center">
+            <ol class="block-b2">
+              <li>Turuiemon</li>
+              <li>Wendimon</li>
+            </ol>
+          </div>
+        </div>
+        <div class="block-c1">
+          <div class="center">
+            <p><strong class="popbold">Favorite Toy: </strong><span id="favToySpfc5"></span> (<span id="favToy5"></span>)</p>
+            <p><strong class="popbold">Favorite Food: </strong><span id="favoriteFood5"></span></p>  
+          </div>
+        </div>
+    </div> </span>
+    <span><div id="popup6" class="popup6">
+      <h3 class="block0 popbold" id="digimon6"></h3>
+      <div class="block-a1">
+        <p><strong class="popbold">Basic Stats</strong></p>
+        <ul class="center">
+          <li>Stage: Rookie</li>
+          <li>Raw Data: 0</li>
+          <li>Hit Points: 100%</li>
+          <li>Current Mood: Happy</li>
+          <li>Current Hunger: Full Belly</li>
+        </ul>
+      </div>
+      <div class="block-b1">
+        <p><strong class="popbold">Show Digivolutions</strong></p>
+        <div class="center">
+          <ol class="block-b2">
+            <li></li>
+            <li></li>
+          </ol>
+        </div>
+      </div>
+      <div class="block-c1">
+        <div class="center">
+          <p><strong class="popbold">Favorite Toy: </strong><span id="favToySpfc6"></span> (<span id="favToy6"></span>)</p>
+          <p><strong class="popbold">Favorite Food: </strong><span id="favoriteFood6"></span></p>  
+        </div>
+      </div>
+  </div> </span>
+    <div class="lower-digimon">
+              <div class="digimon-4 popupclick4" id="digimon-4">
                 <div class="digi-border-4">
-                  <img class="base" src="./img/terriermon-gaming.png">
+                  <img class="base" src="./img/terriermon.png">
                   <img class="clothing glasses" src="./img/terriermon-shades.png">
                 </div>
                 <p class="digi-label"><strong>Terriermon</strong></p>
               </div>
-              <div class="digimon-5">
+              <div class="digimon-5" id="digimon-5">
                 <div class="digi-border-5">
                   <img src="./img/lopmon.png">
                 </div>
