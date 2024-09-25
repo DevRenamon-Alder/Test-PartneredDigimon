@@ -200,16 +200,30 @@ let favToy = [];
 let favToySpfc = [];
 
 // Randomly assigns a number to each array for each digimon
-for (let a = 0; a <= 6; a++) {
-  let ranFood = Math.floor(Math.random() * 3);
-  favFoodN.push(ranFood);
-  let ranFoodSpfc = Math.floor(Math.random() * 4);
-  favFoodSpfcN.push(ranFoodSpfc);
-  let ranToy = Math.floor(Math.random() * 5);
-  favToyN.push(ranToy);
-  let ranToySpfc = Math.floor(Math.random() * 5);
-  favToySpfcN.push(ranToySpfc);
-};
+favFoodN[0] = Math.floor(Math.random() * 3);
+favFoodN[1] = Math.floor(Math.random() * 3);
+favFoodN[2] = Math.floor(Math.random() * 3);
+favFoodN[3] = Math.floor(Math.random() * 3);
+favFoodN[4] = Math.floor(Math.random() * 3);
+favFoodN[5] = Math.floor(Math.random() * 3);
+favFoodSpfcN[0] = Math.floor(Math.random() * 4);
+favFoodSpfcN[1] = Math.floor(Math.random() * 4);
+favFoodSpfcN[2] = Math.floor(Math.random() * 4);
+favFoodSpfcN[3] = Math.floor(Math.random() * 4);
+favFoodSpfcN[4] = Math.floor(Math.random() * 4);
+favFoodSpfcN[5] = Math.floor(Math.random() * 4);
+favToyN[0] = Math.floor(Math.random() * 5);
+favToyN[1] = Math.floor(Math.random() * 5);
+favToyN[2] = Math.floor(Math.random() * 5);
+favToyN[3] = Math.floor(Math.random() * 5);
+favToyN[4] = Math.floor(Math.random() * 5);
+favToyN[5] = Math.floor(Math.random() * 5);
+favToySpfcN[0] = Math.floor(Math.random() * 5);
+favToySpfcN[1] = Math.floor(Math.random() * 5);
+favToySpfcN[2] = Math.floor(Math.random() * 5);
+favToySpfcN[3] = Math.floor(Math.random() * 5);
+favToySpfcN[4] = Math.floor(Math.random() * 5);
+favToySpfcN[5] = Math.floor(Math.random() * 5);
 
 // Arrays for favorite options
 let foodTypes = ['Burritos', 'Burgers', 'Sandwiches']
@@ -217,44 +231,49 @@ let burritos = ['Carnitas Burrito', 'Breakfast Burrito', 'California Burrito', '
 let burgers = ['Cheeseburger', 'BBQ Bacon Burger', 'Swiss Mushroom Burger', 'Steakburger']
 let sandwiches = ['Spicy Chicken Sandwich', 'BLT Sandwich', 'Reuben Sandwich', 'Grilled Cheese Sandwich']
 
-// Sets string variables to the appropriate food type and specific food type for each digimon based on the number given
-for (let b = 0; b <= 6; b++) {
-  if (favFoodN[b] === 0) {
-    favFood.push(foodTypes[0]);
-    if (favFoodSpfcN[b] === 0) {
-      favFoodSpfc.push(burritos[0])
-    } else if (favFoodSpfcN[b] === 1) {
-      favFoodSpfc.push(burritos[1])
-    } else if (favFoodSpfcN[b] === 2) {
-      favFoodSpfc.push(burritos[2])
-    } else if (favFoodSpfcN[b] === 3) {
-      favFoodSpfc.push(burritos[3])
-    }
+favFood[0] = foodTypes[favFoodN[0]]
+favFood[1] = foodTypes[favFoodN[1]]
+favFood[2] = foodTypes[favFoodN[2]]
+favFood[3] = foodTypes[favFoodN[3]]
+favFood[4] = foodTypes[favFoodN[4]]
+favFood[5] = foodTypes[favFoodN[5]]
+
+// Sets corresponding favorite food to each corresponding array item for each digimon
+for (let c = 0; c < 6; c++) {
+if (favFoodN[c] === 0) {
+  favFood[c] = foodTypes[0]
+  if (favFoodSpfcN[c] === 0) {
+    favFoodSpfc[c] = burritos[0]
+  } else if (favFoodSpfcN[c] === 1) {
+    favFoodSpfc[c] = burritos[1]
+  } else if (favFoodSpfcN[c] === 2) {
+    favFoodSpfc[c] = burritos[2]
+  } else if (favFoodSpfcN[c] === 3) {
+    favFoodSpfc[c] = burritos[3]
   }
-  if (favFoodN[b] === 1) {
-    favFood.push(foodTypes[1]);
-    if (favFoodSpfcN[b] === 0) {
-      favFoodSpfc.push(burgers[0])
-    } else if (favFoodSpfcN[b] === 1) {
-      favFoodSpfc.push(burgers[1])
-    } else if (favFoodSpfcN[b] === 2) {
-      favFoodSpfc.push(burgers[2])
-    } else if (favFoodSpfcN[b] === 3) {
-      favFoodSpfc.push(burgers[3])
-    }
+} else if (favFoodN[c] === 1) {
+  favFood[c] = foodTypes[1]
+  if (favFoodSpfcN[c] === 0) {
+    favFoodSpfc[c] = burgers[0]
+  } else if (favFoodSpfcN[c] === 1) {
+    favFoodSpfc[c] = burgers[1]
+  } else if (favFoodSpfcN[c] === 2) {
+    favFoodSpfc[c] = burgers[2]
+  } else if (favFoodSpfcN[c] === 3) {
+    favFoodSpfc[c] = burgers[3]
   }
-  if (favFoodN[b] === 2) {
-    favFood.push(foodTypes[2]);
-    if (favFoodSpfcN[b] === 0) {
-      favFoodSpfc.push(sandwiches[0])
-    } else if (favFoodSpfcN[b] === 1) {
-      favFoodSpfc.push(sandwiches[1])
-    } else if (favFoodSpfcN[b] === 2) {
-      favFoodSpfc.push(sandwiches[2])
-    } else if (favFoodSpfcN[b] === 3) {
-      favFoodSpfc.push(sandwiches[3])
-    }
+} else if (favFoodN[c] === 2) {
+  favFood[c] = foodTypes[2]
+  if (favFoodSpfcN[c] === 0) {
+    favFoodSpfc[c] = sandwiches[0]
+  } else if (favFoodSpfcN[c] === 1) {
+    favFoodSpfc[c] = sandwiches[1]
+  } else if (favFoodSpfcN[c] === 2) {
+    favFoodSpfc[c] = sandwiches[2]
+  } else if (favFoodSpfcN[c] === 3) {
+    favFoodSpfc[c] = sandwiches[3]
   }
+}
 }
 
 let toyTypes = ['Video Games', 'Board Games', 'Movies', 'Books', 'Standard Toys']
@@ -264,84 +283,80 @@ let movies = ['War in the Outback II', 'The Noun', 'Freaky Incomprehensible Alie
 let books = ['Grapes of Wrath', 'Moby Dick', 'The Iliad', 'The Great Gatsby', 'Dr. Jekyll & Mr. Hyde']
 let objectToys = ['Commander Police Action Figure', 'Remote Control Monster Truck', 'Catgirl Kim Anime Figurine', 'Miss Woman Thing Girlpower Doll', 'Therapeutic Sheep Pillow']
 
-// Assigns randomized favorites
-for (let N = 0; N <= 6; N++) {
-  if (favToyN[N] === 0) {
-    favToy.push(toyTypes[0])
-    if (favToySpfcN[N] === 0) {
-      favToySpfc.push(videoGames[0])
-    } else if (favToySpfcN[N] === 1) {
-      favToySpfc.push(videoGames[1])
-    } else if (favToySpfcN[N] === 2) {
-      favToySpfc.push(videoGames[2])
-    } else if (favToySpfcN[N] === 3) {
-      favToySpfc.push(videoGames[3])
-    } else if (favToySpfcN[N] === 4) {
-      favToySpfc.push(videoGames[4])
+// Sets corresponding favorite toy to each corresponding array item for each digimon
+for (let d = 0; d < 6; d++) {
+  if (favToyN[d] === 0) {
+    favToy[d] = toyTypes[0]
+    if (favToySpfcN[d] === 0) {
+      favToySpfc[d] = videoGames[0]
+    } else if (favToySpfcN[d] === 1) {
+      favToySpfc[d] = videoGames[1]
+    } else if (favToySpfcN[d] === 2) {
+      favToySpfc[d] = videoGames[2]
+    } else if (favToySpfcN[d] === 3) {
+      favToySpfc[d] = videoGames[3]
+    } else if (favToySpfcN[d] === 4) {
+      favToySpfc[d] = videoGames[4]
+    }
+  } else if (favToyN[d] === 1) {
+    favToy[d] = toyTypes[1]
+    if (favToySpfcN[d] === 0) {
+      favToySpfc[d] = boardGames[0]
+    } else if (favToySpfcN[d] === 1) {
+      favToySpfc[d] = boardGames[1]
+    } else if (favToySpfcN[d] === 2) {
+      favToySpfc[d] = boardGames[2]
+    } else if (favToySpfcN[d] === 3) {
+      favToySpfc[d] = boardGames[3]
+    } else if (favToySpfcN[d] === 4) {
+      favToySpfc[d] = boardGames[4]
+    }
+  } else if (favToyN[d] === 2) {
+    favToy[d] = toyTypes[2]
+    if (favToySpfcN[d] === 0) {
+      favToySpfc[d] = movies[0]
+    } else if (favToySpfcN[d] === 1) {
+      favToySpfc[d] = movies[1]
+    } else if (favToySpfcN[d] === 2) {
+      favToySpfc[d] = movies[2]
+    } else if (favToySpfcN[d] === 3) {
+      favToySpfc[d] = movies[3]
+    } else if (favToySpfcN[d] === 4) {
+      favToySpfc[d] = movies[4]
+    }
+  } else if (favToyN[d] === 3) {
+    favToy[d] = toyTypes[3]
+    if (favToySpfcN[d] === 0) {
+      favToySpfc[d] = books[0]
+    } else if (favToySpfcN[d] === 1) {
+      favToySpfc[d] = books[1]
+    } else if (favToySpfcN[d] === 2) {
+      favToySpfc[d] = books[2]
+    } else if (favToySpfcN[d] === 3) {
+      favToySpfc[d] = books[3]
+    } else if (favToySpfcN[d] === 4) {
+      favToySpfc[d] = books[4]
+    }
+  } else if (favToyN[d] === 4) {
+    favToy[d] = toyTypes[4]
+    if (favToySpfcN[d] === 0) {
+      favToySpfc[d] = objectToys[0]
+    } else if (favToySpfcN[d] === 1) {
+      favToySpfc[d] = objectToys[1]
+    } else if (favToySpfcN[d] === 2) {
+      favToySpfc[d] = objectToys[2]
+    } else if (favToySpfcN[d] === 3) {
+      favToySpfc[d] = objectToys[3]
+    } else if (favToySpfcN[d] === 4) {
+      favToySpfc[d] = objectToys[4]
     }
   }
-  if (favToyN[N] === 1) {
-    favToy.push(toyTypes[1])
-    if (favToySpfcN[N] === 0) {
-      favToySpfc.push(boardGames[0])
-    } else if (favToySpfcN[N] === 1) {
-      favToySpfc.push(boardGames[1])
-    } else if (favToySpfcN[N] === 2) {
-      favToySpfc.push(boardGames[2])
-    } else if (favToySpfcN[N] === 3) {
-      favToySpfc.push(boardGames[3])
-    } else if (favToySpfcN[N] === 4) {
-      favToySpfc.push(boardGames[4])
-    }
-  }
-  if (favToyN[N] === 2) {
-    favToy.push(toyTypes[2])
-    if (favToySpfcN[N] === 0) {
-      favToySpfc.push(movies[0])
-    } else if (favToySpfcN[N] === 1) {
-      favToySpfc.push(movies[1])
-    } else if (favToySpfcN[N] === 2) {
-      favToySpfc.push(movies[2])
-    } else if (favToySpfcN[N] === 3) {
-      favToySpfc.push(movies[3])
-    } else if (favToySpfcN[N] === 4) {
-      favToySpfc.push(movies[4])
-    }
-  }
-  if (favToyN[N] === 3) {
-    favToy.push(toyTypes[3])
-    if (favToySpfcN[N] === 0) {
-      favToySpfc.push(books[0])
-    } else if (favToySpfcN[N] === 1) {
-      favToySpfc.push(books[1])
-    } else if (favToySpfcN[N] === 2) {
-      favToySpfc.push(books[2])
-    } else if (favToySpfcN[N] === 3) {
-      favToySpfc.push(books[3])
-    } else if (favToySpfcN[N] === 4) {
-      favToySpfc.push(books[4])
-    }
-  }
-  if (favToyN[N] === 4) {
-    favToy.push(toyTypes[4])
-    if (favToySpfcN[N] === 0) {
-      favToySpfc.push(objectToys[0])
-    } else if (favToySpfcN[N] === 1) {
-      favToySpfc.push(objectToys[1])
-    } else if (favToySpfcN[N] === 2) {
-      favToySpfc.push(objectToys[2])
-    } else if (favToySpfcN[N] === 3) {
-      favToySpfc.push(objectToys[3])
-    } else if (favToySpfcN[N] === 4) {
-      favToySpfc.push(objectToys[4])
-    }
-  }
-}
+  }  
 
 // Adds the randomized favorites to the popup's text
-document.getElementById('favToySpfc1').innerHTML = favToySpfc[0];
-document.getElementById('favToy1').innerHTML = favToy[0];
-document.getElementById('favoriteFood1').innerHTML = favoriteFood1;
+document.getElementById("favToySpfc1").innerHTML = favToySpfc[0];
+document.getElementById("favToy1").innerHTML = favToy[0];
+document.getElementById("favoriteFood1").innerHTML = favoriteFood1;
 
 document.getElementById('favToySpfc2').innerHTML = favToySpfc[1];
 document.getElementById('favToy2').innerHTML = favToy[1];
